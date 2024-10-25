@@ -1,0 +1,60 @@
+base_url = "https://blog.gohu.dev"
+title = "gohu blog"
+description = ""
+default_language = "en-US"
+# theme = ""
+output_dir = "public"
+# preserve_dotfiles_in_output = false
+compile_sass = true
+minify_html = false
+# ignored_content = []
+# ignored_static = []
+generate_feeds = true
+feed_filenames = ["atom.xml"]
+feed_limit = 10
+hard_link_static = false
+author = "GOHU"
+# taxonomies = []
+build_search_index = true
+generate_sitemap = true
+generate_robots_txt = true
+
+[markdown]
+highlight_code = true
+highlight_theme = "base16-ocean-dark"
+render_emoji = true
+# extra_syntaxes_and_themes = []
+# external_links_target_blank = false
+# external_links_no_follow = false
+# external_links_no_referrer = false
+smart_punctuation = true
+# lazy_async_image = false
+# ** bottom_footnotes = true
+
+# [link_checker]
+# skip_prefixes = [ "http://[2001:db8::]/", ]
+# skip_anchor_prefixes = [ "https://caniuse.com/", ]
+# internal_level = "error"
+# external_level = "error"
+
+# [slugify]
+# paths = "on"
+# taxonomies = "on"
+# anchors = "on"
+# paths_keep_dates = false
+
+[search]
+include_title = true
+include_description = false
+include_date = false
+include_path = false
+include_content = false
+truncate_content_length = 20
+index_format = "fuse_javascript"
+
+# [translations]
+
+# [languages]
+
+[extra]
+# Put all your custom variables here
