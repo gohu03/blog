@@ -1,0 +1,19 @@
+@use "theme";
+@use "config";
+
+// layout
+@use "layout/dock.scss";
+
+body {
+  background-color: var(--background-color);
+  color: var(--default-font-color);
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+@media ( max-width: #{config.$post-default-width} ){
+  body {
+    padding: 0 20px;
+  }
+}

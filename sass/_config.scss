@@ -1,0 +1,24 @@
+@use "sass:map";
+
+// post
+$post-default-width: 800px;
+
+// dock
+$dock: (
+  short-side: 60px,
+  position: 20px,
+  button-size: 50px,
+  icon-size: 45px,
+  padding: (
+    long: 20px,
+    short: 5px
+  ),
+  gap: 20px,
+  child: 4
+);
+
+// responsive-width 값 설정
+$dock: map.merge($dock, (
+  responsive-width: $post-default-width + ( 2 * ( map.get($dock, 'short-side') + ( 2 * map.get($dock, 'position')) ) ),
+  long-side: ( map.get($dock, 'child') * map.get($dock, 'button-size') ) + ( 2 * map.get($dock, 'padding', 'long') ) + ( map.get($dock, 'gap') * ( map.get($dock, 'child') - 1) )
+));

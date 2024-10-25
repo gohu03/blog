@@ -1,0 +1,111 @@
+@use "sass:map";
+@use "../theme";
+@use "../config";
+
+// icon image
+:root[color-theme="light"]{
+  --home-image: url('/assets/icons/dock/home.svg');
+  --theme-switcher-image: url('/assets/icons/dock/light.svg');
+}
+
+:root[color-theme="dark"]{
+  --home-image: url('/assets/icons/dock/home-fill.svg');
+  --theme-switcher-image: url('/assets/icons/dock/dark.svg');
+}
+
+.dock {
+  background-color: var(--dock-background-color);
+  position: fixed;
+  list-style-type: none;
+
+  li {
+    display: block;
+    width: #{map.get(config.$dock, 'button-size')};
+    height: #{map.get(config.$dock, 'button-size')};
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: #{map.get(config.$dock, 'icon-size')} #{map.get(config.$dock, 'icon-size')};
+
+    &:hover{
+      background-color: var(--dock-hovered-color);
+    }
+    &:active{
+      background-color: var(--dock-clicked-color);
+    }
+  }
+
+  .home { background-image: var(--home-image); }
+  .theme-switcher{ background-image: var(--theme-switcher-image); }
+}
+
+@media ( min-width: #{map.get(config.$dock, 'responsive-width')} ){
+  .dock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: #{map.get(config.$dock, 'padding', 'long')} #{map.get(config.$dock, 'padding', 'short')};
+    gap: #{map.get(config.$dock, 'gap')};
+
+    top: 50%;
+    transform: translateY(-50%);
+    left: #{map.get(config.$dock, 'position')};
+
+    width: #{map.get(config.$dock, 'short-side')};
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--dock-border-color);
+    border-radius: 20px;
+  }
+}
+
+@media ( max-width: #{map.get(config.$dock, 'responsive-width')} ){
+  .dock {
+    height: #{map.get(config.$dock, 'short-side')};
+    margin-bottom: 0;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;;
+    align-items: center;
+    padding: #{map.get(config.$dock, 'padding', 'short')} #{map.get(config.$dock, 'padding', 'long')};
+  }
+}
+
+@media ( min-width: #{config.$post-default-width} ) and ( max-width: #{map.get(config.$dock, 'responsive-width')} ){
+  .dock{
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--dock-border-color);
+    border-radius: 20px;
+
+    gap: #{map.get(config.$dock, 'gap')};
+
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+
+    transition: transform 0.25s;
+
+    &.hidden {
+      transform: translate(-50%, calc(100% + 20px));
+    }
+  }
+}
+
+@media ( max-width: #{config.$post-default-width} ){
+  .dock {
+    width: auto;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    transition: transform 0.25s;
+
+    &.hidden {
+      transform: translateY(100%);
+    }
+  }
+}
+

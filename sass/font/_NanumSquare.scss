@@ -1,0 +1,31 @@
+@font-face {
+  font-family: 'NanumSquare';
+  font-weight: 800;
+  font-style: normal;
+  src: local('NanumSquareExtraBold'),
+    url('/assets/fonts/NanumSquare/NanumSquareEB.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'NanumSquare';
+  font-weight: bold;
+  font-style: normal;
+  src: local('NanumSquareBold'), 
+    url('/assets/fonts/NanumSquare/NanumSquareB.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'NanumSquare';
+  font-weight: normal;
+  font-style: normal;
+  src: local('NanumSquare'), 
+    url('/assets/fonts/NanumSquare/NanumSquareR.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'NanumSquare';
+  font-weight: 300;
+  font-style: normal;
+  src: local('NanumSquareLight')
+    url('/assets/font/NanumSquare/NanumSquareL.woff2'), format('woff2');
+}

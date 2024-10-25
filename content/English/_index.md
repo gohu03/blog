@@ -1,5 +1,5 @@
 +++
 title = "English"
 template = "section.html"
-page_template = "page.html"
+page_template = "post.html"
 +++

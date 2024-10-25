@@ -1,0 +1,32 @@
+:root[color-theme="light"]{
+  $primary-color: #c1dcba;
+
+  ////////////////////////////////////////////////
+
+  --default-font-color: #000000;
+  --background-color: #{$primary-color};
+
+  ////////////
+  // layout //
+  ////////////
+  // dock
+  --dock-background-color: #202020;
+  --dock-border-color: #808080;
+  --dock-button-background-color: transparent;
+  --dock-hovered-color: #303030;
+  --dock-clicked-color: #404040;
+  --home-image: url('/assets/icons/dock/home.svg')
+  --theme-switcher-image: url('/assets/icons/dock/light.svg');
+
+  //////////
+  // post //
+  //////////
+  // table
+  --table-border-color: #4d3910;
+  --table-heading-cell-color: #809e7d;
+  --table-empty-cell-color: #aaaaaa;
+  
+  // code
+  --code-background-color: #202020;
+  --code-font-color: #C3DF6A;
+}

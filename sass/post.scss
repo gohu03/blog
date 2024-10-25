@@ -1,0 +1,143 @@
+@use "sass:map";
+@use "theme";
+@use "config";
+
+////////////////////////////
+////////// config //////////
+////////////////////////////
+$default-border-width: 1px;
+
+@use 'font/NanumSquare.scss';
+@use 'font/D2Coding.scss';
+$default-content-font: 'NanumSquare';
+$default-code-font: 'D2Coding';
+$not-allow-class: 'not-allow';
+
+$title: (
+  font: (
+    size: 3rem,
+    weight: 800
+  )
+);
+
+// content
+$font: (
+  size: (
+    h1: 2.5rem,
+    h2: 2rem,
+    h3: 1.5rem,
+    h4: 1.125rem,
+    p: 1rem
+  ),
+  height: (
+    heading: 1.5
+  )
+);
+
+// table
+$table: (
+  cell: (
+    padding: (
+      lr: 0.2em, // left and right
+      tb: 0.25em // top and bottom
+    )
+  )
+);
+
+// code
+$code: (
+  padding: (
+    tb: 0.05em,
+    lr: 0.25em
+  ),
+  margin: (
+    tb: 0.05em,
+    lr: 0.1em
+  ),
+  radius: 0.3em
+);
+
+
+///////////////////////////////
+///////////// css /////////////
+///////////////////////////////
+.post {
+  font-family: $default-content-font;
+  width: config.$post-default-width;
+  margin-left: auto;
+  margin-right: auto;
+
+  .post-title {
+    h1 {
+      font-size: #{map.get($title, 'font', 'size')};
+      font-weight: #{map.get($title, 'font', 'weight')};
+    }
+  }
+
+  .post-content{
+    h1:not(.#{$not-allow-class}), h2:not(.#{$not-allow-class}), h3:not(.#{$not-allow-class}), h4:not(.#{$not-allow-class}){
+      line-height: #{map.get($font, 'height', 'heading')};
+      margin-bottom: 1rem;
+    }
+
+    h1:not(.#{$not-allow-class}) {
+      font-size: #{map.get($font, 'size', 'h1')};
+    }
+
+    h2:not(.#{$not-allow-class}) {
+      font-size: #{map.get($font, 'size', 'h2')};
+    }
+
+    h3:not(.#{$not-allow-class}) {
+      font-size: #{map.get($font, 'size', 'h3')};
+    }
+
+    h4:not(.#{$not-allow-class}) {
+      font-size: #{map.get($font, 'size', 'h4')};
+    }
+
+    table:not(.#{$not-allow-class}) {
+      th {
+        text-align: center;
+        vertical-align: middle;
+        font-weight: bold;
+        color: var(--default-font-color);
+        background-color: var(--table-heading-cell-color);
+      }
+
+      th, td {
+        padding: #{map.get($table, 'cell', 'padding', 'tb')} #{map.get($table, 'cell', 'padding', 'lr')};
+      }
+
+      &, th, td {
+        border-width: $default-border-width;
+        border-style: solid;
+        border-color: var(--table-border-color);
+        border-collapse: collapse;
+      }
+
+      td:empty{
+        text-align: center;
+        vertical-align: middle;
+        background-color: var(--table-empty-cell-color);
+
+        &::after{
+          content: "-";
+        }
+      }
+    }
+    
+    code:not(.#{$not-allow-class}, .highlight code) {
+      font-family: $default-code-font;
+      background-color: var(--code-background-color);
+      color: var(--code-font-color);
+      padding: #{map.get($code, 'padding', 'tb')} #{map.get($code, 'padding', 'lr')};
+      margin: #{map.get($code, 'margin', 'tb')} #{map.get($code, 'padding', 'lr')};
+      border-radius: #{map.get($code, 'radius')};
+    }
+  }
+}
+
+@media ( max-width: #{config.$post-default-width} ){
+  .post { width: auto; }
+}

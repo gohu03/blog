@@ -2,6 +2,10 @@
 
 {% set title = section.title %}
 
+{% block metadata %}
+<title>{{ section.title }} | {{ config.title }}</title>
+{% endblock metadata %}
+
 {% block content %}
 <h1 class="title">
   {{ section.title }}

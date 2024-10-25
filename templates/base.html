@@ -1,11 +1,9 @@
-{% set_global title = config.title %}
-
 <!DOCTYPE html>
 <html lang="{{ page.lang | default(value='en-US')}}">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ title }}</title>
+  {% block metadata %} {% endblock %}
 </head>
 <body>
   <section>
