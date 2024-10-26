@@ -4,11 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="/site.css">
-  <script src="/js/site/site.js"></script>
   {% block metadata %} {% endblock %}
 </head>
 <body>
   {% include "layout/dock.html" %}
+  <script src="js/src/theme.js"></script>
+  <script type="module" src="js/src/dock.js"></script>
   <section>
     {% block content %} {% endblock %}
   </section>

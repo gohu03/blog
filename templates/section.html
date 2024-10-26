@@ -5,12 +5,19 @@
 {% endblock metadata %}
 
 {% block content %}
-<h1 class="title">
-  {{ section.title }}
-</h1>
+<h1 class="title">{{ section.title }}</h1>
 <ul>
   {% for page in section.pages %}
     <li><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
+  {% endfor %}
+</ul>
+
+<hr>
+
+<h1>Sub sections</h1>
+<ul>
+  {% for sub in section.subsections %}
+    <li><a href="{{ section.permalink | safe }}{{ sub | replace(from='/_index.md', to='') | safe }}">{{ sub | replace(from='/_index.md', to='') | safe }}</a></li>
   {% endfor %}
 </ul>
 {% endblock content %}
