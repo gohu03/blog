@@ -15,7 +15,8 @@
 		"vscode": {
 			"extensions": [
 				"ms-vscode.live-server",
-				"dbaeumer.vscode-eslint"
+				"dbaeumer.vscode-eslint",
+				"jock.svg"
 			]
 		}
 	}

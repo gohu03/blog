@@ -1,0 +1,22 @@
+:root[color-theme="dark"]{
+  $primary-color: #191919;
+  $secondary-color: #202020;
+  $border-color: #808080;
+  $hovered-color: #303030;
+  $clicked-color: #404040;
+  $font-color: #d4d4d4;
+
+  ////////////////////////////////////////////////
+
+  --font-color: #{$font-color};
+  --background-color: #{$primary-color};
+
+  // table
+  --table-border-color: #{$border-color};
+  --table-heading-cell-color: #143444;
+  --table-empty-cell-color: #808080;
+
+  // code
+  --code-background-color: #202020;
+  --code-font-color: #C3DF6A;
+}
