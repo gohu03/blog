@@ -11,10 +11,6 @@ collections_dir: collections
 collections:
   word:
     output: true
-  term:
-    output: true
-  study:
-    output: true
 defaults:
   - scope: # post
       path: collections/_posts 
