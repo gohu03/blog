@@ -1,0 +1,55 @@
+# seo
+title: "gohu blog"
+description: "anything"
+url: "https://blog.gohu.dev"
+author: "GOHU"
+
+# path
+baseurl: "/"
+permalink: /:categories/:title
+collections_dir: collections
+collections:
+  word:
+    output: true
+  term:
+    output: true
+  study:
+    output: true
+defaults:
+  - scope: # post
+      path: collections/_posts 
+      type: posts
+    values:
+      permalink: post/:categories/:title
+      layout: post
+  - scope: # study
+      path: collections/_study/
+      type: study
+    values:
+      permalink: /study/:categories/:title
+      layout: post
+
+# markdown
+markdown: CommonMarkGhPages
+commonmark:
+  options: ["SMART", "FOOTNOTES"]
+  extensions: ["strikethrough", "autolink", "table", "tagfilter"]
+sass:
+  sass_dir: _sass
+  style: compressed
+
+plugins:
+  - jekyll-avatar
+  - jekyll-default-layout
+  - jekyll-feed
+  - jekyll-gist
+  - jekyll-github-metadata
+  - jekyll-include-cache
+  - jekyll-mentions
+  - jekyll-optional-front-matter
+  - jekyll-redirect-from
+  - jekyll-sass-converter
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-titles-from-headings
+  - jemoji
