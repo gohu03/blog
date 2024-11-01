@@ -9,7 +9,9 @@ baseurl: "/"
 permalink: /:categories/:title
 collections_dir: collections
 collections:
-  word:
+  study:
+    output: true
+  quiz:
     output: true
 defaults:
   - scope: # post
@@ -24,6 +26,12 @@ defaults:
     values:
       permalink: /study/:categories/:title
       layout: post
+  - scope: # quiz
+      path: collections/_quiz/
+      type: quiz
+    values:
+      permalink: /quiz/:path
+      layout: quiz
 
 # markdown
 markdown: CommonMarkGhPages
