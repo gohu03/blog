@@ -1,0 +1,5 @@
+@use './base';
+
+:root[color-theme="dark"]{
+  --l_399986f4c4aec187: #{base.$primary-color}; // background color
+}

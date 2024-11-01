@@ -1,0 +1,20 @@
+@use './base';
+
+:root[color-theme="dark"]{
+  // post
+  --l_0c8f40c5024a93a4: #{base.$secondary-color}; // post background color
+  --l_5bed83a019f22a52: #{base.$border-color}; // post border color
+  --l_b20a475e6a60832a: #{base.$border-color}; // post header border color
+  --l_acf45832fbb2bf1c: transparent; // post header background color
+  --l_b006dd208e6bdfdc:#{base.$font-color}; // post header title font color
+  --p_9724f46eb7f08fb6: #{base.$font-color}; // font color
+
+  // table
+  --p_2bc67fada43d013a: #{base.$border-color}; // table border color
+  --p_15be6d62b03d637a: #{base.$tertiary-color}; // table heading cell background color
+  --p_e55b323a25729f63: #ffffff; // table heading cell font color
+
+  // code
+  --p_209c700fff0d5ce1: #202020; // code background color
+  --p_7a6cce189dbf9f30: #C3DF6A; // code font color
+}
