@@ -1,6 +1,8 @@
 @use 'theme';
+@use "font/NanumSquareRound";
 
 body {
   margin: 0;
-  background-color: var(--l_399986f4c4aec187);
+  background-color: var(--l_bg-color);
+  font-family: 'NanumSquareRound';
 }
