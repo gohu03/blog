@@ -1,0 +1,36 @@
+@use "theme/post";
+
+.lp_content {
+  h1, h2, h3, h4 {
+    font-weight: 800;
+  }
+  
+  code {
+    background-color: var(--pc_bg-color);
+    color: var(--pc_font-color);
+  }
+
+  // table
+  table, th, td {
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--pt_border-color);
+    border-collapse: collapse;
+    padding: 0.2em 0.5em;
+  }
+  th {
+    background-color: var(--pt-h_bg-color);
+    color: var(--pt-h_font-color);
+    text-align: center;
+    vertical-align: middle;
+  }
+  td:empty {
+    background-color: var(--pt-e_bg-color);
+    color: var(--pt-e_font-color);
+    text-align: center;
+    vertical-align: middle;
+    &:after{
+      content: '-';
+    }
+  }
+}
