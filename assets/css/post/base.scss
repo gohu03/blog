@@ -3,6 +3,29 @@
 
 @use "theme/post";
 
+.lp_section {
+  color: var(--p_font-color);
+  font-family: 'NanumSquare';
+}
+
+.lp_header {
+  width: 100%;
+  background-color: var(--lp-h_bg-color);
+
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--lp-h_border-color);
+}
+
+.lp_title {
+  font-weight: 800;
+  margin: 0;
+}
+
+.lp_actions{
+  display: none;
+}
+
 .lp_content {
   h1, h2, h3, h4 {
     font-weight: 800;
