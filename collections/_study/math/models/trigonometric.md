@@ -1,0 +1,3 @@
+---
+title: trigonometric functions
+---

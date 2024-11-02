@@ -24,14 +24,96 @@ defaults:
       path: collections/_study/
       type: study
     values:
-      permalink: /study/:categories/:title
+      permalink: /study/:categories/:name
       layout: post
+  - scope: ## C
+      path: collections/_study/development/language/c
+      type: study
+    values:
+      category: clang
+  - scope: ## Rust
+      path: collections/_study/development/language/rust
+      type: study
+    values:
+      category: rust
+  - scope: ## javascript
+      path: collections/_study/development/language/js
+      type: study
+    values:
+      category: js
+  - scope: ## liquid
+      path: collections/_study/development/template/liquid
+      type: study
+    values:
+      category: liquid
+  - scope: ## git
+      path: collections/_study/development/tools/git
+      type: study
+    values:
+      category: git
+  - scope: ## vscode
+      path: collections/_study/development/tools/vscode
+      type: study
+    values:
+      category: vscode
+  - scope: ## english
+      path: collections/_study/language/english
+      type: study
+    values:
+      category: english
+  - scope: ### english/grammar
+      path: collections/_study/language/english/grammar
+      type: study
+    values:
+      categories:
+        - english
+        - grammar
+  - scope: ### english/word_class
+      path: collections/_study/language/english/word_class
+      type: study
+    values:
+      categories:
+        - english
+        - word_class
+  - scope: ## math
+      path: collections/_study/math
+      type: study
+    values:
+      category: math
+      components: [math]
+  - scope: ### math/models
+      path: collections/_study/math/models
+      type: study
+    values:
+      categories:
+        - math
+        - models
+  - scope: ### math/limit
+      path: collections/_study/math/limit
+      type: study
+    values:
+      categories:
+        - math
+        - limit
+  - scope: ### math/diff
+      path: collections/_study/math/diff
+      type: study
+    values:
+      categories:
+        - math
+        - diff
+  - scope: ### math/integral
+      path: collections/_study/math/integral
+      type: study
+    values:
+      categories:
+        - math
+        - integral
   - scope: # quiz
       path: collections/_quiz/
       type: quiz
     values:
       permalink: /quiz/:path
-      layout: quiz
 
 # markdown
 markdown: CommonMarkGhPages
