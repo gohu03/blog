@@ -1,7 +1,15 @@
----
-layout: default
----
+{% capture metadata %}
+  {% seo %}
+  <link rel="stylesheet" type="text/css" href="assets/post/base.css">
 
+  <!-- components -->
+  {% for component in page.components %}
+    {% include component/{{ component }}.html %}
+  {% endfor %}
+  <!-- end components -->
+{% endcapture %}
+
+{% capture content %}
 <main class="lp_section">
   <header class="lp_header">
     <h1 class="lp_title">{{ page.title }}</h1>
@@ -10,4 +18,14 @@ layout: default
     {{ page.content }}
   </article>
 </main>
-<nav class="lt_section"></nav>
+
+{% include toc.html 
+  html=page.content 
+  h_max=4 
+  class='lt_section' 
+  item_class='lt_item' 
+  submenu_class='lt_submenu' 
+  %}
+{% endcapture %}
+
+{% include layout/template.html %}
