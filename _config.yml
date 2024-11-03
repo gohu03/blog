@@ -26,6 +26,11 @@ defaults:
     values:
       permalink: /study/:categories/:name
       layout: post
+  - scope: # gpu
+      path: collections/_study/computer/hardware/gpu
+      type: study
+    values:
+      category: gpu
   - scope: ## C
       path: collections/_study/development/language/c
       type: study
@@ -41,6 +46,11 @@ defaults:
       type: study
     values:
       category: js
+  - scope: ## wgsl
+      path: collections/_study/development/language/wgsl
+      type: study
+    values:
+      category: wgsl
   - scope: ## liquid
       path: collections/_study/development/template/liquid
       type: study
