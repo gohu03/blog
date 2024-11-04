@@ -32,11 +32,26 @@
   h1, h2, h3, h4 {
     font-weight: 800;
   }
+
+  hr {
+    margin: 2rem 0;
+  }
   
   code {
     font-family: 'D2Coding';
-    background-color: var(--pc_bg-color);
     color: var(--pc_font-color);
+
+    padding: 0.1em 0.3em;
+    margin: 0.25em 0.3em;
+    border-radius: 0.3em;
+    background-color: var(--pc_bg-color);
+  }
+
+  ul {
+    padding-left: 1em;
+  }
+  li {
+    padding-top: 1em;
   }
 
   // table

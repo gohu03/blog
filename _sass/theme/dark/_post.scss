@@ -7,6 +7,7 @@
   --lp-h_border-color: #{base.$border-color};
   --lp-h_bg-color: transparent;
   --lp-h_title-font-color:#{base.$font-color};
+  --lp-h_actions-line-color: #{base.$border-color};
 
   --p_font-color: #{base.$font-color}; 
 
@@ -16,7 +17,7 @@
   --pt-h_font-color: #{base.$font-color};
 
   // code
-  --pc_bg-color: #202020;
+  --pc_bg-color: #{base.$border-color};
   --pc_font-color: #C3DF6A;
 
   // toc
