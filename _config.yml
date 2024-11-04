@@ -56,6 +56,23 @@ defaults:
       type: study
     values:
       category: liquid
+  - scope: ## cloud
+      path: collections/_study/development/cloud
+      type: study
+    values:
+      category: cloud
+  - scope: ## azure
+      path: collections/_study/development/cloud/azure
+      type: study
+    values:
+      category: azure
+  - scope: ## azure/database
+      path: collections/_study/development/cloud/azure/database
+      type: study
+    values:
+      categories:
+        - azure
+        - database
   - scope: ## git
       path: collections/_study/development/tools/git
       type: study
