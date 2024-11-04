@@ -1,0 +1,26 @@
+@media (min-width:1500px){
+  .lt_section {
+    display: flex;
+    flex-direction: column;
+
+    border-left-width: 5px;
+    border-left-style: solid;
+    border-left-color: var(--lt_border-color);
+
+    position: sticky;
+    top: 200px;
+    right: 25px;
+    margin: 0 auto;
+
+    a {
+      color: var(--lt_font-color);
+      text-decoration: none;
+    }
+    li {
+      list-style: none;
+    }
+    ul {
+      margin-left: 1em;
+    }
+  }
+}

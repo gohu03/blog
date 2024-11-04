@@ -18,4 +18,8 @@
   // code
   --pc_bg-color: #202020;
   --pc_font-color: #C3DF6A;
+
+  // toc
+  --lt_border-color: #{base.$border-color};
+  --lt_font-color: #{base.$font-color};
 }
