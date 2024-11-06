@@ -1,0 +1,23 @@
+{% for category in include.categories %}
+
+  {% capture name %}
+    {% if category.link %}
+      <a class="lsm_menu-item linked" href="/study/{{ category.link }}">{{ category.name }}</a>
+    {% else %}
+      <div class="lsm_menu-item">{{ category.name }}</div>
+    {% endif %}
+  {% endcapture name %}
+
+  {% if category.subcategories %}
+    <li class="lsm_submenu-item">
+      {{ name }}
+      <ul class="lsm_submenu">
+        {% include layout/sidemenu/study.items.html categories=category.subcategories %}
+      </ul>
+    </li>
+  {% else %}
+    <li>
+      {{ name }}
+    </li>
+  {% endif %}
+{% endfor %}

@@ -2,4 +2,20 @@
 
 :root[color-theme="dark"]{
   --l_bg-color: #{base.$primary-color}; // background color
+
+  --lb_bg-color: #{base.$secondary-color};
+  --lb_border-color: #{base.$border-color};
+  --lb_hovered-color: #{base.$hovered-color};
+  --lb_clicked-color: #{base.$clicked-color};
+
+  --lsm_bg-color: #{base.$secondary-color};
+  --lsm_border-color: #{base.$border-color};
+  --lsm_title-color: #{base.$font-color};
+  --lsm_category-color: #8a94a1;
+  --lsm_item-font-color: #{base.$font-color};
+  --lsm_item-hovered-color: #{base.$hovered-color};
+  --lsm_item-clicked-color: #{base.$clicked-color};
+
+  --l-icon_fill-color: #{base.$font-color};
+  --l-icon_stroke-color: #{base.$font-color};
 }

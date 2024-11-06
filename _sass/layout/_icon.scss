@@ -1,0 +1,8 @@
+.li_filled{
+  pointer-events: none;
+  fill: var(--l-icon_fill-color);
+}
+
+.li_not-filled svg {
+  stroke: var(--l-icon_stroke-color);
+}

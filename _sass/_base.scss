@@ -1,7 +1,12 @@
 @use 'theme';
 @use "font/NanumSquareRound";
 
+@forward 'layout/btn';
+@forward 'layout/icon';
+@forward 'layout/sidemenu';
+
 body {
+  height: 100%;
   margin: 0;
   background-color: var(--l_bg-color);
   font-family: 'NanumSquareRound';

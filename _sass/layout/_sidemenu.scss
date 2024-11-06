@@ -1,0 +1,115 @@
+#lsm_faca0a10 {
+  position: fixed;
+  top: 25px;
+  left: 30px;
+}
+
+#lsm_e1f08971 {
+  $item-height: 72px;
+
+  position: fixed;
+  top:0;
+  left: 0;
+
+  height: 100%;
+  background-color: var(--lsm_bg-color);
+
+  transition: transform 0.5s;
+
+  .lsm_menu {
+    color: var(--lsm_category-color);
+    margin: 0;
+    padding: 0;
+    height: auto;
+    overflow-y: auto;
+  }
+  .lsm_submenu-item {
+    height: $item-height;
+    overflow-y: hidden;
+    transition: height 1s;
+  }
+  .lsm_submenu-item:focus {
+    height: auto;
+    border-bottom: 1px solid var(--lsm_border-color);
+  }
+  .lsm_submenu {
+    overflow-y: hidden;
+    padding: 0;
+    margin: 0;
+  }
+  .lsm_menu-item {
+    height: $item-height;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    color: var(--lsm_item-font-color);
+    padding-left: 1em;
+    font-weight: 800;
+    font-size: 1.5rem;
+    text-decoration: none;
+
+    transition: background-color 0.5s;
+  }
+  .lsm_menu-item:hover {
+    background-color: var(--lsm_item-hovered-color);
+  }
+  .lsm_menu-item:active.linked {
+    background-color: var(--lsm_item-clicked-color);
+  }
+  li {
+    list-style: none;
+  }
+  
+}
+#lsm_e1f08971.hidden{
+  transform: translateX(-100%);
+}
+
+@media (min-width: 800px) {
+  #lsm_e1f08971{
+    width: 300px;
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-right-color: var(--lsm_border-color);
+
+    .lsm_info {
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+      border-bottom-color: var(--lsm_border-color);
+  
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 25px;
+  
+      padding: 25px;
+    }
+    .avatar {
+      border-radius: 50%;
+    }
+    .lsm_title {  
+      color: var(--lsm_title-color);
+      font-size: 3rem;
+      margin: 0;
+    }
+  }
+
+  #lsm_ad2ee9cb{
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    filter: blur(5px);
+  }
+  #lsm_ad2ee9cb.hidden {
+    display: none;
+    
+  }
+}
