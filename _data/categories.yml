@@ -1,0 +1,49 @@
+- name: development
+  subcategories:
+    - name: language
+      subcategories:
+        - name: clang
+          link: clang
+    - name: web
+      status: unable
+      subcategories:
+        - name: html
+          link: html
+        - name: css
+          link: css
+        - name: scss
+          link: scss
+        - name: js
+          link: js
+        - name: wgsl
+          link: wgsl
+    - name: library
+      status: unable
+      subcategories:
+        - name: react
+          link: react
+    - name: framework
+      status: unable
+      subcategories:
+        - name: jekyll
+          link: jekyll
+    - name: cloud
+      link: cloud
+      subcategories:
+        - name: aws
+          link: aws
+        - name: azure
+          link: azure
+
+- name: language
+  subcategories:
+  - name: english
+    subcategories:
+      - name: word_class
+        link: english/word_class
+      - name: grammar
+        link: english/grammar
+
+- name: math
+    
+
