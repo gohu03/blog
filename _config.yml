@@ -32,7 +32,7 @@ defaults:
     values:
       category: gpu
   - scope: ## C
-      path: collections/_study/development/language/c
+      path: collections/_study/development/language/clang
       type: study
     values:
       category: clang
@@ -42,12 +42,12 @@ defaults:
     values:
       category: rust
   - scope: ## javascript
-      path: collections/_study/development/language/js
+      path: collections/_study/development/web/js
       type: study
     values:
       category: js
   - scope: ## wgsl
-      path: collections/_study/development/language/wgsl
+      path: collections/_study/development/web/wgsl
       type: study
     values:
       category: wgsl
