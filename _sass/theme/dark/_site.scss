@@ -8,15 +8,17 @@
   --lb_hovered-color: #{base.$hovered-color};
   --lb_clicked-color: #{base.$clicked-color};
 
+  --lh_bg-color: #{base.$secondary-color};
+
   --lsm_bg-color: #{base.$secondary-color};
   --lsm_border-color: #{base.$border-color};
   --lsm_title-color: #{base.$font-color};
   --lsm_category-color: #8a94a1;
+  --lsm_close-btn-color: #{base.$font-color};
   --lsm_item-font-color: #{base.$font-color};
   --lsm_item-hovered-color: #{base.$hovered-color};
   --lsm_item-clicked-color: #{base.$clicked-color};
   --lsm_sub-toggle-color: #{base.$font-color};
 
-  --l-icon_fill-color: #{base.$font-color};
-  --l-icon_stroke-color: #{base.$font-color};
+  --l-icon_color: #{base.$font-color};
 }

@@ -1,8 +1,8 @@
 export const $side_menu = {
   e: document.getElementById('lsm_e1f08971'),
-  btn: document.getElementById('lsm_faca0a10'),
+  openBtn: document.getElementById('lsm_faca0a10'),
   handler: function(ev){
-    if(!this.e.contains(ev.target)){
+    if(!this.e.contains(ev.target) || ev.target.id == 'lsm_307f2d68'){
       ev.preventDefault();
       this.hide();
       return;
@@ -38,20 +38,20 @@ export const $side_menu = {
   show: function(ev){
     ev.stopPropagation();
     this.e.removeAttribute('hidden');
-    this.btn.removeEventListener('click', this.showBound);
+    this.openBtn.removeEventListener('click', this.showBound);
 
     window.addEventListener('click', this.handlerBound);
   },
   hide: function(){
     this.e.setAttribute('hidden', '');
-    this.btn.addEventListener('click', this.showBound);
+    this.openBtn.addEventListener('click', this.showBound);
     window.removeEventListener('click', this.handlerBound);
   },
   init(){
     this.showBound = this.show.bind(this);
     this.handlerBound = this.handler.bind(this);
 
-    this.btn.addEventListener('click', this.showBound);
+    this.openBtn.addEventListener('click', this.showBound);
   }
 };
 

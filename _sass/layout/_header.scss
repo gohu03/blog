@@ -1,0 +1,47 @@
+#lsm_faca0a10>div{
+  width: 100%;
+  height: 100%;
+  mask-image: url('/assets/icons/menu.svg');
+  mask-repeat: no-repeat;
+  mask-position: center center;
+  mask-size: 30px 36px;
+  background-color: var(--l-icon_color);
+}
+
+@media screen and (min-width: 1000px){
+  #lsm_faca0a10 {
+    position: fixed;
+    top: 25px;
+    left: 25px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--lb_bg-color);
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--lb_border-color);
+    border-radius: 10px;
+  }
+}
+
+@media screen and (max-width: 1000px){
+  .lh_container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    padding: 10px 10px;
+    align-items: center;
+
+    background-color: var(--lh_bg-color);
+  }
+  #lsm_faca0a10 {
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+  }
+}
