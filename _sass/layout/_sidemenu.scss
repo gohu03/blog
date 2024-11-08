@@ -15,55 +15,79 @@
   background-color: var(--lsm_bg-color);
 
   transition: transform 0.5s;
-
-  .lsm_menu {
-    color: var(--lsm_category-color);
+  .lsm_info{
+    display: none;
+  }
+  .lsm_items {
+    padding-left: 0;
     margin: 0;
-    padding: 0;
-    height: auto;
     overflow-y: auto;
   }
-  .lsm_submenu-item {
-    height: $item-height;
-    overflow-y: hidden;
-    transition: height 1s;
+  .lsm_item-container {
+    list-style: none;
   }
-  .lsm_submenu-item:focus {
-    height: auto;
-    border-bottom: 1px solid var(--lsm_border-color);
-  }
-  .lsm_submenu {
-    overflow-y: hidden;
-    padding: 0;
-    margin: 0;
-  }
-  .lsm_menu-item {
-    height: $item-height;
 
+  .lsm_item-wrapper {
+    height: $item-height;
+    display: flex;
+    flex-direction: row;
+  }
+  .lsm_item {
+    flex-grow: 1;
+    padding-left: 1rem;
+    font-size: 24px;
     display: flex;
     flex-direction: row;
     align-items: center;
-
     color: var(--lsm_item-font-color);
-    padding-left: 1em;
     font-weight: 800;
-    font-size: 1.5rem;
-    text-decoration: none;
-
-    transition: background-color 0.5s;
   }
-  .lsm_menu-item:hover {
+  .lsm_item:hover {
     background-color: var(--lsm_item-hovered-color);
   }
-  .lsm_menu-item:active.linked {
+  a.lsm_item {
+    text-decoration: none;
+  }
+  a.lsm_item:active {
     background-color: var(--lsm_item-clicked-color);
   }
-  li {
-    list-style: none;
+  .lsm_sub-toggle {
+    width: $item-height;
+    height: 100%;
+    color: var(--lsm_sub-toggle-color);
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  
+  .lsm_sub-toggle:hover {
+    background-color: var(--lsm_item-hovered-color);
+  }
+  .lsm_sub-toggle:active {
+    background-color: var(--lsm_item-clicked-color);
+  }
+  .lsm_sub-toggle::after{
+    transition: rotate 0.5s;
+    content: '▼';
+  }
+  .lsm_sub-toggle[show] {
+    display: flex;
+  }
+  .lsm_sub-toggle[show]::after{
+    rotate: -180deg;
+  }
+  .lsm_subcategories {
+    padding-left: 0;
+    margin: 0;
+    height: 0;
+    overflow-y: hidden;
+    border-left: 3px solid var(--lsm_border-color);
+    margin-left: 3px;
+    transition: height 0.5s;
+  }
 }
-#lsm_e1f08971.hidden{
+#lsm_e1f08971[hidden]{
+  display: block;
   transform: translateX(-100%);
 }
 
@@ -73,6 +97,9 @@
     border-right-width: 1px;
     border-right-style: solid;
     border-right-color: var(--lsm_border-color);
+    
+    display: flex;
+    flex-direction: column;
 
     .lsm_info {
       border-bottom-width: 1px;
@@ -107,9 +134,5 @@
 
     background-color: rgba(0, 0, 0, 0.5);
     filter: blur(5px);
-  }
-  #lsm_ad2ee9cb.hidden {
-    display: none;
-    
   }
 }

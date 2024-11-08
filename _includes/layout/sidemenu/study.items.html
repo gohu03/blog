@@ -1,23 +1,19 @@
 {% for category in include.categories %}
-
-  {% capture name %}
-    {% if category.link %}
-      <a class="lsm_menu-item linked" href="/study/{{ category.link }}">{{ category.name }}</a>
+  <li class="lsm_item-container">
+    <div class="lsm_item-wrapper">
+      {% if category.link %}
+      <a class="lsm_item" href="/study/{{ category.link }}">{{ category.name }}</a>
+      {% else %}
+      <div class="lsm_item">{{ category.name }}</div>
+      {% endif %}
+      {% if category.subcategories %}
+      <div class="lsm_sub-toggle"></div>
+    </div>
+    <ul class="lsm_subcategories">
+      {% include layout/sidemenu/study.items.html categories=category.subcategories %}
+    </ul>
     {% else %}
-      <div class="lsm_menu-item">{{ category.name }}</div>
+    </div>
     {% endif %}
-  {% endcapture name %}
-
-  {% if category.subcategories %}
-    <li class="lsm_submenu-item">
-      {{ name }}
-      <ul class="lsm_submenu">
-        {% include layout/sidemenu/study.items.html categories=category.subcategories %}
-      </ul>
-    </li>
-  {% else %}
-    <li>
-      {{ name }}
-    </li>
-  {% endif %}
+  </li>
 {% endfor %}
