@@ -2,8 +2,7 @@
   {% seo %}
   <link rel="stylesheet" 
     type="text/css" 
-    href="/assets/css/post/base.css">
-  <link rel="stylesheet" type="text/css" href="/assets/css/post/desktop.css" media="screen and (pointer: fine)">
+    href="/assets/css/post.css">
 
   <!-- components -->
   {% for component in page.components %}
@@ -18,10 +17,10 @@
     <h1 class="lp_title">{{ page.title }}</h1>
     <ul class="lp_actions">
       <li>
-        <a href="https://github.com/gohu03/blog/edit/main/collections/{{ page.path }}"><img src="/assets/icons/pen.svg" alt="edit">edit</a>
+        <a href="https://github.com/gohu03/blog/edit/main/collections/{{ page.path }}"><div class="lp_actios-icon icon_edit"></div>edit</a>
       </li>
       <li>
-        <a href="https://github.com/gohu03/blog/delete/main/collections/{{ page.path }}"><img src="/assets/icons/del.svg" alt="delete">delete</a>
+        <a href="https://github.com/gohu03/blog/delete/main/collections/{{ page.path }}"><div class="lp_actios-icon icon_delete"></div>delete</a>
       </li>
     </ul>
   </header>
