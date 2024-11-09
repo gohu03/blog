@@ -1,11 +1,12 @@
-#lsm_faca0a10>div{
-  width: 100%;
-  height: 100%;
-  mask-image: url('/assets/icons/menu.svg');
-  mask-repeat: no-repeat;
-  mask-position: center center;
-  mask-size: 30px 36px;
-  background-color: var(--l-icon_color);
+.lh_container .icon_menu{
+  width: 30px;
+  height: 36px;
+}
+
+#lsm_faca0a10{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media screen and (min-width: 1000px){
@@ -21,6 +22,9 @@
     border-color: var(--lb_border-color);
     border-radius: 10px;
   }
+  .lh_title {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 1000px){
@@ -35,6 +39,7 @@
     flex-direction: row;
     padding: 10px 10px;
     align-items: center;
+    gap: 10px;
 
     background-color: var(--lh_bg-color);
   }
@@ -43,5 +48,11 @@
     height: 50px;
     background-color: transparent;
     border: none;
+  }
+  .lh_title {
+    color: var(--lh_title-color);
+    font-size: 28px;
+    font-weight: 800;
+    margin: 0;
   }
 }

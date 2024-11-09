@@ -1,0 +1,23 @@
+@mixin icon($icon){
+  mask-image: url('/assets/icons/#{$icon}.svg');
+  mask-repeat: no-repeat;
+  mask-position: center center;
+  mask-size: contain;
+  background-color: var(--icon-color);
+}
+
+.icon_edit {
+  @include icon('pen');
+}
+
+.icon_delete {
+  @include icon('delete');
+}
+
+.icon_menu {
+  @include icon('menu');
+}
+
+.icon_close {
+  @include icon('close');
+}

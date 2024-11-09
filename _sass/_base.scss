@@ -1,6 +1,7 @@
 @use 'theme';
 @use "font/NanumSquareRound";
 
+@forward 'icons/icons';
 @forward 'layout/header';
 @forward 'layout/icon';
 @forward 'layout/sidemenu';

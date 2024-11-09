@@ -9,6 +9,7 @@
   --lb_clicked-color: #{base.$clicked-color};
 
   --lh_bg-color: #{base.$secondary-color};
+  --lh_title-color: #{base.$font-color};
 
   --lsm_bg-color: #{base.$secondary-color};
   --lsm_border-color: #{base.$border-color};
@@ -20,5 +21,5 @@
   --lsm_item-clicked-color: #{base.$clicked-color};
   --lsm_sub-toggle-color: #{base.$font-color};
 
-  --l-icon_color: #{base.$font-color};
+  --icon-color: #{base.$font-color};
 }
