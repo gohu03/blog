@@ -2,7 +2,7 @@
   subcategories:
     - name: language
       subcategories:
-        - name: clang
+        - name: C
           link: clang
     - name: web
       status: unable
