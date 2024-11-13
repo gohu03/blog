@@ -3,6 +3,11 @@
 @use "theme/post";
 @use "font/D2Coding";
 
+:root {
+  --pf_red: #C35F57;
+  --pf_green: #6B9B75;
+}
+
 .lp_section {
   color: var(--p_font-color);
 }
