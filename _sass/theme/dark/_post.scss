@@ -10,6 +10,7 @@
   --lp-h_actions-line-color: #{base.$border-color};
 
   --p_font-color: #{base.$font-color}; 
+  --p_scrollbar-bg-color: #{base.$border-color};
 
   // table
   --pt_border-color: #{base.$border-color};
@@ -17,7 +18,7 @@
   --pt-h_font-color: #{base.$font-color};
 
   // code
-  --pc_bg-color: #{base.$border-color};
+  --pc_bg-color: #{base.$quaternary-color};
   --pc_font-color: #C3DF6A;
 
   // toc

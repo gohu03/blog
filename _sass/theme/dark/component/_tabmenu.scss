@@ -1,0 +1,9 @@
+@use '../base';
+
+:root[color-theme="dark"]{
+  --tabmenu_selector-item-bg-color: #{base.$tertiary-color};
+  --tabmenu_selector-item-selected-color: #{base.$clicked-color};
+  --tabmenu_selector-item-border-color: #{base.$border-color};
+  --tabmenu_content-bg-color: transparent;
+  --tabmenu_content-border-color: #{base.$border-color};
+}
