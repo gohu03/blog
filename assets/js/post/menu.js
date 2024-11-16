@@ -1,10 +1,10 @@
-class tabMenuBase{
+class MenuComponentBase{
   constructor(e){
     this.element = e;
     this.items = e.getElementsByTagName('div');
 
     this.selector = document.createElement('ul');
-    this.selector.classList.add('ptm_selector');
+    this.selector.classList.add('pm_selector');
 
     this.cur = e.dataset.default ? e.dataset.default : this.items.item(0).title;
     for(const item of this.items){
@@ -26,14 +26,14 @@ class tabMenuBase{
 
   createSelectorItem(item){
     const li = document.createElement('li');
-    li.classList.add('ptm_item');
+    li.classList.add('pm_item');
     li.dataset.title = item;
     li.innerText = item;
     return li;
   }
 
   selectHandler(ev){
-    if(!ev.target.classList.contains('ptm_item'))
+    if(!ev.target.classList.contains('pm_item'))
       return;
     
     this.selector.querySelector('li[data-title=\"' + this.cur + '\"]').removeAttribute('select');
@@ -47,7 +47,7 @@ class tabMenuBase{
 }
 
 window.addEventListener('DOMContentLoaded', function(){
-  for(const temp of document.getElementsByClassName('tab-menu')){
-    new tabMenuBase(temp);
+  for(const temp of document.getElementsByClassName('menu')){
+    new MenuComponentBase(temp);
   }
 });

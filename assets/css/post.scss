@@ -73,14 +73,14 @@
   }
   table::-webkit-scrollbar {
     background-color: transparent;
-    height: 10px;
+    height: 5px;
   }
   table::-webkit-scrollbar-button {
     display: none;
   }
   table::-webkit-scrollbar-thumb {
     background-color: var(--p_scrollbar-bg-color);
-    border-radius: 5px;
+    border-radius: 2.5px;
   }
   table, th, td {
     border-collapse: collapse;

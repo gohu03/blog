@@ -2,6 +2,7 @@
 
 :root[color-theme="dark"]{
   --tabmenu_selector-item-bg-color: #{base.$tertiary-color};
+  --tabmenu_selector-item-hovered-color: #{base.$hovered-color};
   --tabmenu_selector-item-selected-color: #{base.$clicked-color};
   --tabmenu_selector-item-border-color: #{base.$border-color};
   --tabmenu_content-bg-color: transparent;
