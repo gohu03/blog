@@ -1,0 +1,12 @@
+{
+  "category": {
+    "prefix": "category",
+    "body": [
+      "- scope: # $2",
+      "\t\tpath: collections/$1/$2",
+      "\tvalues:",
+      "\t\tcategories:",
+      "\t\t\t- $2"
+    ]
+  }
+}

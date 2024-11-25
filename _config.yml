@@ -9,132 +9,168 @@ baseurl: "/"
 permalink: /:categories/:title
 collections_dir: collections
 collections:
-  theory:
-    output: true
   develop:
     output: true
+    permalink: /:categories/:title
+  algorithm:
+    output: true
+    permalink: /:categories/:title
+  math: 
+    output: true
+    permalink: /:categories/:title
   language:
     output: true
-  quiz:
-    output: true
+    permalink: /:categories/:title
 defaults:
-  - scope: # post
-      path: collections/_posts 
-      type: posts
+  - scope: # Post
+      path: collections/_posts
     values:
-      permalink: post/:categories/:title
       layout: post
-  - scope: # theory
-      path: collections/_theory/
-      type: theory
+      permalink: /post/:categories/:title
+  - scope: # Algorithm
+      path: collections/_algorithm
+      type: algorithm
     values:
-      permalink: /theory/:categories/:name
-      layout: post
-  - scope: # develop
-      path: collections/_develop
-      type: develop
-    values:
-      permalink: /develop/:categories/:name
-      layout: post
-  - scope: # language
-      path: collections/_language
-      type: language
-    values:
-      permalink: /language/:categories/:name
-      layout: post
-  - scope: # C
-      path: collections/_develop/language/clang
-      type: develop
-    values:
-      categories: 
-        - clang
-  - scope: # C++
-      path: collections/_develop/language/c++
-      type: develop
-    values:
-      categories: 
-        - c++
-  - scope: # Python
-      path: collections/_develop/language/python
-      type: develop
-    values:
-      categories: 
-        - python
-  - scope: # Rust
-      path: collections/_develop/language/rust
-      type: develop
-    values:
-      categories: 
-        - rust
-  - scope: # React
-      path: collections/_develop/library/react
-      type: develop
-    values:
-      categories: 
-        - react
-  - scope: # vscode
-      path: collections/_develop/tools/vscode
-      type: develop
-    values:
-      categories: 
-        - vscode
-  - scope: # vscode/extension
-      path: collections/_develop/tools/vscode/extension
-      type: develop
-    values:
-      categories: 
-        - vscode
-        - extension
-  - scope: # data structure
-      path: collections/_theory/computer/data-structure
-      type: theory
-    values:
-      categories: 
-        - data-structure
-  - scope: # algorithm
-      path: collections/_theory/computer/algorithm
-      type: theory
-    values:
-      categories: 
+      categories:
         - algorithm
-  - scope: # cpu
-      path: collections/_theory/computer/hardware/cpu
-      type: theory
+  - scope: # Hardware
+      path: collections/_hardware
+      type: hardware
     values:
-      categories: 
+      categories:
+        - hardware
+  - scope: # CPU
+      path: collections/_hardware/cpu
+    values:
+      categories:
+        - hardware
         - cpu
-  - scope: # gpu
-      path: collections/_theory/computer/hardware/gpu
-      type: theory
+  - scope: # GPU
+      path: collections/_hardware/gpu
     values:
-      categories: 
+      categories:
+        - hardware
         - gpu
   - scope: # RAM
-      path: collections/_theory/computer/hardware/ram
-      type: theory
+      path: collections/_hardware/ram
     values:
-      categories: 
+      categories:
+        - hardware
         - ram
-  - scope: # cloud
-      path: collections/_theory/develop/cloud
-      type: theory
+  - scope: # Math
+      path: collections/_math
+      type: math
     values:
-      categories: 
-        - cloud
-  - scope: # math
-      path: collections/_theory/math
-      type: theory
-    values:
-      categories: 
+      categories:
         - math
-      components: 
-        - math
-  - scope:
+  - scope: # English
       path: collections/_language/english
-      type: language
     values:
       categories:
         - english
+  - scope: # Windows
+      path: collections/_develop/os/windows
+    values:
+      categories:
+        - os
+        - windows
+  - scope: # Linux
+      path: collections/_develop/os/linux
+    values:
+      categories:
+        - os
+        - linux
+  - scope: # Android
+      path: collections/_develop/os/android
+    values:
+      categories:
+        - os
+        - android
+  - scope: # HTML
+      path: collections/_develop/web/html
+    values:
+      categories:
+        - html
+  - scope: # CSS
+      path: collections/_develop/web/css
+    values:
+      categories:
+        - css
+  - scope: # SCSS
+      path: collections/_develop/web/scss
+    values:
+      categories:
+        - scss
+  - scope: # liquid
+      path: collections/_develop/web/template/liquid
+    values:
+      categories:
+        - liquid
+  - scope: # C
+      path: collections/_develop/language/clang
+    values:
+      categories:
+        - clang
+  - scope: # C++
+      path: collections/_develop/language/c++
+    values:
+      categories:
+        - c++
+  - scope: # Python
+      path: collections/_develop/language/python
+    values:
+      categories:
+        - python
+  - scope: # Rust
+      path: collections/_develop/language/rust
+    values:
+      categories:
+        - rust
+  - scope: # React
+      path: collections/_develop/library/react
+    values:
+      categories:
+        - react
+  - scope: # Jekyll
+      path: collections/_develop/framework/jekyll
+    values:
+      categories:
+        - jekyll
+  - scope: # Cloud
+      path: collections/_develop/cloud
+    values:
+      categories:
+        - cloud
+  - scope: # AWS
+      path: collections/_develop/cloud/aws
+    values:
+      categories:
+        - cloud
+        - aws
+  - scope: # Azure
+      path: collections/_develop/cloud/azure
+    values:
+      categories:
+        - cloud
+        - azure
+  - scope: # git
+      path: collections/_develop/tool/git
+    values:
+      categories:
+        - git
+  - scope: # vscode
+      path: collections/_develop/tool/vscode
+    values:
+      categories:
+        - vscode
+  - scope: # vscode
+      path: collections/_develop/tool/vscode/extension
+    values:
+      categories:
+        - vscode
+        - extension
+  
+
 
 # markdown
 markdown: CommonMarkGhPages
