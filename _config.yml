@@ -126,6 +126,16 @@ defaults:
     values:
       categories:
         - rust
+  - scope: # Javascript
+      path: collections/_develop/language/javascript
+    values:
+      categories:
+        - javascript
+  - scope: # Typescript
+      path: collections/_develop/language/typescript
+    values:
+      categories:
+        - typescript
   - scope: # React
       path: collections/_develop/library/react
     values:

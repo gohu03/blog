@@ -1,22 +1,28 @@
-- name: computer
+- name: algorithm
+  link: algorithm
   sub:
     - name: 'data structure'
-    - name: algorithm
-    - name: hardware
-      sub:
-        - name: CPU
-        - name: GPU
-        - name: RAM
+- name: hardware
+  sub:
+    - name: CPU
+    - name: GPU
+    - name: RAM
 - name: development
   sub: 
     - name: language
       sub: 
         - name: C
+          link: clang
         - name: C++
+          link: c++
         - name: Rust
+          link: rust
         - name: Python
+          link: python
         - name: Javascript
+          link: javascript
         - name: Typescript
+          link: typescript
     - name: web
       sub:
         - name: HTML
