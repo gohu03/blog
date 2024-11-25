@@ -10,11 +10,11 @@
         {{ category.name }}
       </div>
       {% endif %}
-      {% if category.subcategories %}
+      {% if category.sub %}
       <div class="lsm_sub-toggle"></div>
     </div>
     <ul class="lsm_subcategories">
-      {% include layout/sidemenu/study.items.html categories=category.subcategories %}
+      {% include layout/sidemenu/study.items.html categories=category.sub %}
     </ul>
     {% else %}
     </div>

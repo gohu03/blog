@@ -1,49 +1,55 @@
+- name: computer
+  sub:
+    - name: 'data structure'
+    - name: algorithm
+    - name: hardware
+      sub:
+        - name: CPU
+        - name: GPU
+        - name: RAM
 - name: development
-  subcategories:
+  sub: 
     - name: language
-      subcategories:
+      sub: 
         - name: C
-          link: clang
+        - name: C++
+        - name: Rust
+        - name: Python
+        - name: Javascript
+        - name: Typescript
     - name: web
-      status: unable
-      subcategories:
-        - name: html
-          link: html
-        - name: css
-          link: css
-        - name: scss
-          link: scss
-        - name: js
-          link: js
-        - name: wgsl
-          link: wgsl
-    - name: library
-      status: unable
-      subcategories:
-        - name: react
-          link: react
+      sub:
+        - name: HTML
+        - name: template
+          sub:
+            - name: liquid
+        - name: CSS
+        - name: SCSS
+        - name: WGSL
     - name: framework
-      status: unable
-      subcategories:
-        - name: jekyll
-          link: jekyll
+      sub:
+        - name: Jekyll
+    - name: library
+    - name: OS
+      sub:
+        - name: Windows
+        - name: Linux
+        - name: Android
+    - name: tools
+      sub:
+        - name: Git
+        - name: Notion
+        - name: vscode
     - name: cloud
-      link: cloud
-      subcategories:
-        - name: aws
-          link: aws
-        - name: azure
-          link: azure
-
-- name: language
-  subcategories:
-  - name: english
-    subcategories:
-      - name: word_class
-        link: english/word_class
-      - name: grammar
-        link: english/grammar
-
+      sub:
+        - name: AWS
+        - name: Azure
 - name: math
+  sub: 
+    - name: models
+    - name: algebra
+    - name: calculus
+- name: language
+  sub:
+    - name: english
     
-

@@ -9,7 +9,11 @@ baseurl: "/"
 permalink: /:categories/:title
 collections_dir: collections
 collections:
-  study:
+  theory:
+    output: true
+  develop:
+    output: true
+  language:
     output: true
   quiz:
     output: true
@@ -20,127 +24,117 @@ defaults:
     values:
       permalink: post/:categories/:title
       layout: post
-  - scope: # study
-      path: collections/_study/
-      type: study
+  - scope: # theory
+      path: collections/_theory/
+      type: theory
     values:
-      permalink: /study/:categories/:name
+      permalink: /theory/:categories/:name
       layout: post
+  - scope: # develop
+      path: collections/_develop
+      type: develop
+    values:
+      permalink: /develop/:categories/:name
+      layout: post
+  - scope: # language
+      path: collections/_language
+      type: language
+    values:
+      permalink: /language/:categories/:name
+      layout: post
+  - scope: # C
+      path: collections/_develop/language/clang
+      type: develop
+    values:
+      categories: 
+        - clang
+  - scope: # C++
+      path: collections/_develop/language/c++
+      type: develop
+    values:
+      categories: 
+        - c++
+  - scope: # Python
+      path: collections/_develop/language/python
+      type: develop
+    values:
+      categories: 
+        - python
+  - scope: # Rust
+      path: collections/_develop/language/rust
+      type: develop
+    values:
+      categories: 
+        - rust
+  - scope: # React
+      path: collections/_develop/library/react
+      type: develop
+    values:
+      categories: 
+        - react
+  - scope: # vscode
+      path: collections/_develop/tools/vscode
+      type: develop
+    values:
+      categories: 
+        - vscode
+  - scope: # vscode/extension
+      path: collections/_develop/tools/vscode/extension
+      type: develop
+    values:
+      categories: 
+        - vscode
+        - extension
+  - scope: # data structure
+      path: collections/_theory/computer/data-structure
+      type: theory
+    values:
+      categories: 
+        - data-structure
+  - scope: # algorithm
+      path: collections/_theory/computer/algorithm
+      type: theory
+    values:
+      categories: 
+        - algorithm
+  - scope: # cpu
+      path: collections/_theory/computer/hardware/cpu
+      type: theory
+    values:
+      categories: 
+        - cpu
   - scope: # gpu
-      path: collections/_study/computer/hardware/gpu
-      type: study
+      path: collections/_theory/computer/hardware/gpu
+      type: theory
     values:
-      category: gpu
-  - scope: ## C
-      path: collections/_study/development/language/clang
-      type: study
+      categories: 
+        - gpu
+  - scope: # RAM
+      path: collections/_theory/computer/hardware/ram
+      type: theory
     values:
-      category: clang
-  - scope: ## Rust
-      path: collections/_study/development/language/rust
-      type: study
+      categories: 
+        - ram
+  - scope: # cloud
+      path: collections/_theory/develop/cloud
+      type: theory
     values:
-      category: rust
-  - scope: ## javascript
-      path: collections/_study/development/web/js
-      type: study
+      categories: 
+        - cloud
+  - scope: # math
+      path: collections/_theory/math
+      type: theory
     values:
-      category: js
-  - scope: ## wgsl
-      path: collections/_study/development/web/wgsl
-      type: study
-    values:
-      category: wgsl
-  - scope: ## liquid
-      path: collections/_study/development/template/liquid
-      type: study
-    values:
-      category: liquid
-  - scope: ## cloud
-      path: collections/_study/development/cloud
-      type: study
-    values:
-      category: cloud
-  - scope: ## azure
-      path: collections/_study/development/cloud/azure
-      type: study
-    values:
-      category: azure
-  - scope: ## azure/database
-      path: collections/_study/development/cloud/azure/database
-      type: study
-    values:
-      categories:
-        - azure
-        - database
-  - scope: ## git
-      path: collections/_study/development/tools/git
-      type: study
-    values:
-      category: git
-  - scope: ## vscode
-      path: collections/_study/development/tools/vscode
-      type: study
-    values:
-      category: vscode
-  - scope: ## english
-      path: collections/_study/language/english
-      type: study
-    values:
-      category: english
-  - scope: ### english/grammar
-      path: collections/_study/language/english/grammar
-      type: study
+      categories: 
+        - math
+      components: 
+        - math
+  - scope:
+      path: collections/_language/english
+      type: language
     values:
       categories:
         - english
-        - grammar
-  - scope: ### english/word_class
-      path: collections/_study/language/english/word_class
-      type: study
-    values:
-      categories:
-        - english
-        - word_class
-  - scope: ## math
-      path: collections/_study/math
-      type: study
-    values:
-      category: math
-      components: [math]
-  - scope: ### math/models
-      path: collections/_study/math/models
-      type: study
-    values:
-      categories:
-        - math
-        - models
-  - scope: ### math/limit
-      path: collections/_study/math/limit
-      type: study
-    values:
-      categories:
-        - math
-        - limit
-  - scope: ### math/diff
-      path: collections/_study/math/diff
-      type: study
-    values:
-      categories:
-        - math
-        - diff
-  - scope: ### math/integral
-      path: collections/_study/math/integral
-      type: study
-    values:
-      categories:
-        - math
-        - integral
-  - scope: # quiz
-      path: collections/_quiz/
-      type: quiz
-    values:
-      permalink: /quiz/:path
 
 # markdown
 markdown: CommonMarkGhPages
