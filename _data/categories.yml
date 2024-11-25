@@ -30,6 +30,8 @@
       sub:
         - name: Jekyll
     - name: library
+      sub:
+        - name: React
     - name: OS
       sub:
         - name: Windows
