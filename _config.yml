@@ -101,6 +101,11 @@ defaults:
     values:
       categories:
         - scss
+  - scope: # WGSL
+      path: collections/_develop/web/wgsl
+    values:
+      categories:
+        - wgsl
   - scope: # liquid
       path: collections/_develop/web/template/liquid
     values:
